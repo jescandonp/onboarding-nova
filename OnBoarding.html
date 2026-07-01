@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Nova Measurement</title>
+    
+    <!-- Google Fonts: Montserrat (Titulares) y Roboto (Cuerpo) según Manual de Marca -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS para estilos rápidos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Configuración de Colores Corporativos Nova Measurement -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        novaNavy: '#0A192F',    // Nova Deep Navy (Base)
+                        novaBlue: '#0056B3',    // Nova Tech Blue (Acento)
+                        novaGrey: '#E0E5EC',    // Steel Grey (Secundario)
+                        novaCyan: '#00A8E8',    // Precision Cyan (Brillo)
+                        white: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #F3F4F6;
+        }
+        .isometric-bg {
+            background-image: radial-gradient(#E0E5EC 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .phase-badge {
+            @apply px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider;
+        }
+        .training-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased isometric-bg min-h-screen flex flex-col scroll-smooth font-sans">
+
+    <!-- Navbar / Header Corporativo -->
+    <header class="bg-novaNavy text-white shadow-lg border-b-4 border-novaBlue sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00A8E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <div>
+                    <h1 class="font-display font-bold text-xl tracking-wide leading-none text-white">NOVA</h1>
+                    <span class="font-display text-xs tracking-[0.2em] text-novaCyan">MEASUREMENT</span>
+                </div>
+            </div>
+            <div class="text-right hidden md:block">
+                <p class="text-sm font-light text-gray-300 italic">Ingeniería de Alto Nivel</p>
+                <p class="text-xs font-display font-semibold text-novaCyan">PORTAL ONBOARDING</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-6 py-10">
+        
+        <!-- Welcome Section -->
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-display font-bold text-novaNavy mb-4">Bienvenido al equipo</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto font-light">
+                Utiliza esta guía para acceder a las herramientas clave de tu gestión y completar tu formación técnica como Consultor Estratégico.
+            </p>
+        </div>
+
+        <!-- SECCIÓN 1: SISTEMAS PRINCIPALES -->
+        <h3 class="text-xl font-display font-bold text-novaNavy mb-4 border-l-4 border-novaBlue pl-3">Plataformas de Gestión</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            
+            <!-- SharePoint -->
+            <a href="https://novameasurementsas.sharepoint.com/" target="_blank" class="group relative bg-white rounded-xl shadow-md p-6 border-t-4 border-novaBlue hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i data-lucide="folder-kanban" class="w-16 h-16 text-novaBlue"></i>
+                </div>
+                <div class="relative z-10">
+                    <div class="bg-blue-50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-novaBlue">
+                        <i data-lucide="share-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-novaNavy mb-2 group-hover:text-novaBlue transition-colors">SharePoint</h3>
+                    <p class="text-sm text-gray-500 mb-4">Repositorio central de documentos y manuales.</p>
+                    <span class="inline-flex items-center text-sm font-semibold text-novaBlue">Acceder <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></span>
+                </div>
+            </a>
+
+            <!-- DATA CRM -->
+            <a href="https://www.datacrm.com/iniciar-sesion/" target="_blank" class="group relative bg-white rounded-xl shadow-md p-6 border-t-4 border-novaCyan hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i data-lucide="bar-chart-3" class="w-16 h-16 text-novaCyan"></i>
+                </div>
+                <div class="relative z-10">
+                    <div class="bg-cyan-50 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-novaCyan">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-novaNavy mb-2 group-hover:text-novaCyan transition-colors">DATA CRM</h3>
+                    <p class="text-sm text-gray-500 mb-4">Gestión comercial y seguimiento de oportunidades.</p>
+                    <span class="inline-flex items-center text-sm font-semibold text-novaCyan">Iniciar Sesión <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></span>
+                </div>
+            </a>
+
+            <!-- Correo -->
+            <a href="https://outlook.office.com/mail/?ui=es-ES&rs=ES" target="_blank" class="group relative bg-white rounded-xl shadow-md p-6 border-t-4 border-slate-600 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i data-lucide="mail-search" class="w-16 h-16 text-slate-600"></i>
+                </div>
+                <div class="relative z-10">
+                    <div class="bg-slate-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-slate-700">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-novaNavy mb-2 group-hover:text-slate-600 transition-colors">Correo Outlook</h3>
+                    <p class="text-sm text-gray-500 mb-4">Acceso a tu bandeja organizacional.</p>
+                    <span class="inline-flex items-center text-sm font-semibold text-slate-700">Abrir Correo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i></span>
+                </div>
+            </a>
+        </div>
+
+        <!-- SECCIÓN 2: MARCAS -->
+        <h3 class="text-xl font-display font-bold text-novaNavy mb-4 border-l-4 border-novaBlue pl-3">Marcas Representadas</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            
+            <!-- FLEXIM -->
+            <a href="https://www.emerson.com/es-es/automation/brands/flexim" target="_blank" class="group relative bg-gradient-to-br from-novaNavy to-slate-800 rounded-xl shadow-lg p-6 text-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i data-lucide="activity" class="w-20 h-20 text-novaCyan"></i>
+                </div>
+                <div class="relative z-10">
+                    <span class="inline-block bg-novaCyan/20 text-novaCyan text-[9px] font-bold px-2 py-1 rounded-full mb-3">DIST. AUTORIZADO</span>
+                    <h3 class="font-display font-bold text-xl text-white mb-2">Flexim</h3>
+                    <p class="text-[11px] text-gray-300 mb-3">Medición ultrasónica clamp-on para Oil & Gas, energía y procesos.</p>
+                    <p class="text-[9px] text-novaCyan font-semibold uppercase tracking-wider">emerson.com/flexim →</p>
+                </div>
+            </a>
+
+            <!-- SMAR -->
+            <a href="https://www.smar.com.br/pt" target="_blank" class="group relative bg-gradient-to-br from-novaBlue to-novaNavy rounded-xl shadow-lg p-6 text-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i data-lucide="settings-2" class="w-20 h-20 text-white"></i>
+                </div>
+                <div class="relative z-10">
+                    <span class="inline-block bg-white/20 text-white text-[9px] font-bold px-2 py-1 rounded-full mb-3">PARTNER EXCLUSIVO</span>
+                    <h3 class="font-display font-bold text-xl text-white mb-2">Smar</h3>
+                    <p class="text-[11px] text-gray-300 mb-3">Instrumentación y control de procesos: presión, temperatura, posición y Fieldbus.</p>
+                    <p class="text-[9px] text-white font-semibold uppercase tracking-wider">smar.com.br →</p>
+                </div>
+            </a>
+
+            <!-- UWT -->
+            <a href="https://www.uwtgroup.com/es/" target="_blank" class="group relative bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl shadow-lg p-6 text-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i data-lucide="gauge" class="w-20 h-20 text-novaGrey"></i>
+                </div>
+                <div class="relative z-10">
+                    <span class="inline-block bg-white/20 text-white text-[9px] font-bold px-2 py-1 rounded-full mb-3">ALIANZA ESTRATÉGICA</span>
+                    <h3 class="font-display font-bold text-xl text-white mb-2">UWT</h3>
+                    <p class="text-[11px] text-gray-300 mb-3">Medición de nivel industrial para silos, tanques y procesos. Tecnología alemana.</p>
+                    <p class="text-[9px] text-novaGrey font-semibold uppercase tracking-wider">uwtgroup.com/es →</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- SECCIÓN 2B: GESTIÓN DE COMPRAS -->
+        <h3 class="text-xl font-display font-bold text-novaNavy mb-4 border-l-4 border-novaBlue pl-3">Gestión de Compras</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            
+            <!-- SMAR NET -->
+            <a href="https://www.smarnet.com.br/dqanet/extranet/index_extra.php" target="_blank" class="group relative bg-gradient-to-r from-novaBlue to-novaNavy rounded-xl shadow-lg p-6 text-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i data-lucide="shopping-cart" class="w-20 h-20 text-white"></i>
+                </div>
+                <div class="relative z-10 flex items-start">
+                    <div class="bg-white/20 p-3 rounded-lg mr-4">
+                        <i data-lucide="globe" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <div>
+                        <span class="inline-block bg-white/20 text-white text-[9px] font-bold px-2 py-1 rounded-full mb-2">PLATAFORMA SMAR</span>
+                        <h3 class="font-display font-bold text-xl text-white mb-1">Smar Net</h3>
+                        <p class="text-[11px] text-gray-200 mb-2">DQAnet Extranet — Portal de gestión de pedidos, cotizaciones y seguimiento de compras Smar.</p>
+                        <p class="text-[9px] text-novaCyan font-semibold uppercase tracking-wider">Acceder a smarnet.com.br →</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- SECCIÓN 3: PLAN MAESTRO DE VENTA CONSULTIVA -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-12 border border-gray-100">
+            <div class="bg-gradient-to-r from-novaNavy to-novaBlue p-8 text-white relative">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <i data-lucide="trending-up" class="w-32 h-32 text-white"></i>
+                </div>
+                <h3 class="text-2xl font-display font-extrabold mb-2 text-white">Programa de Venta Consultiva</h3>
+                <p class="text-novaCyan font-medium">Hacia la Excelencia en Instrumentación Industrial y Control de Procesos</p>
+                <div class="mt-4 flex flex-wrap gap-4 text-xs">
+                    <span class="bg-white/10 px-3 py-1 rounded-full border border-white/20 flex items-center"><i data-lucide="check-circle" class="w-3 h-3 mr-2"></i>Micro-learning semanal</span>
+                    <span class="bg-white/10 px-3 py-1 rounded-full border border-white/20 flex items-center"><i data-lucide="users" class="w-3 h-3 mr-2"></i>Role-Playing Técnico</span>
+                </div>
+            </div>
+
+            <div class="p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Fase 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="phase-badge bg-blue-100 text-blue-700">Fase 1</span>
+                        <h4 class="font-bold text-novaNavy">Nivelación Técnica</h4>
+                    </div>
+                    <p class="text-[11px] text-gray-500 italic font-medium uppercase tracking-wider">El Lenguaje del Cliente</p>
+                    <div class="space-y-3">
+                        <a href="https://www.youtube.com/watch?v=sttfu2qTO1s" target="_blank" class="block p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-novaBlue transition-all group">
+                            <h5 class="text-xs font-bold text-novaNavy flex justify-between group-hover:text-novaBlue transition-colors">1. Fundamentos <i data-lucide="video" class="w-3 h-3 text-red-500"></i></h5>
+                            <p class="text-[10px] text-gray-500 mt-1 font-normal">Lazos de control y arquitectura de procesos.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=7s4C9FoMroY" target="_blank" class="block p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-novaBlue transition-all group">
+                            <h5 class="text-xs font-bold text-novaNavy flex justify-between group-hover:text-novaBlue transition-colors">2. Presión y Nivel <i data-lucide="video" class="w-3 h-3 text-red-500"></i></h5>
+                            <p class="text-[10px] text-gray-500 mt-1 font-normal">Diferenciación de tecnologías y selección.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=3c6BDyE7Bhc" target="_blank" class="block p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-novaBlue transition-all group">
+                            <h5 class="text-xs font-bold text-novaNavy flex justify-between group-hover:text-novaBlue transition-colors">3. Caudalimetría <i data-lucide="video" class="w-3 h-3 text-red-500"></i></h5>
+                            <p class="text-[10px] text-gray-500 mt-1 font-normal">Coriolis vs Electromagnético vs Vortex.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fase 2 -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="phase-badge bg-cyan-100 text-cyan-700">Fase 2</span>
+                        <h4 class="font-bold text-novaNavy">Metodología Consultiva</h4>
+                    </div>
+                    <p class="text-[11px] text-gray-500 italic font-medium uppercase tracking-wider">Diagnóstico y Valor</p>
+                    <div class="space-y-3">
+                        <a href="https://www.youtube.com/watch?v=NdwSzjdLHJs" target="_blank" class="block p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-novaCyan transition-all group">
+                            <h5 class="text-xs font-bold text-novaNavy flex justify-between group-hover:text-novaCyan transition-colors">4. Venta Consultiva B2B <i data-lucide="video" class="w-3 h-3 text-red-500"></i></h5>
+                            <p class="text-[10px] text-gray-500 mt-1 font-normal">Identificación de "dolores" operativos.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=4lOp6P4p1Bw" target="_blank" class="block p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-novaCyan transition-all group">
+                            <h5 class="text-xs font-bold text-novaNavy flex justify-between group-hover:text-novaCyan transition-colors">5. El Pitch de Ingeniería <i data-lucide="video" class="w-3 h-3 text-red-500"></i></h5>
+                            <p class="text-[10px] text-gray-500 mt-1 font-normal">Comunicación de beneficios económicos.</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fase 3 -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="phase-badge bg-novaNavy text-novaCyan">Fase 3</span>
+                        <h4 class="font-bold text-novaNavy">Cierre Estratégico</h4>
+                    </div>
+                    <p class="text-[11px] text-gray-500 italic font-medium uppercase tracking-wider">Gestión de Cuentas</p>
+                    <div class="space-y-3">
+                        <a href="https://www.youtube.com/watch?v=r7D623Al0sU" target="_blank" class="block p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-novaNavy transition-all group">
+                            <h5 class="text-xs font-bold text-novaNavy flex justify-between group-hover:text-novaBlue transition-colors">6. Múltiples Decisores <i data-lucide="video" class="w-3 h-3 text-red-500"></i></h5>
+                            <p class="text-[10px] text-gray-500 mt-1 font-normal">Ingeniería vs Compras en ecosistemas B2B.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=FUDot7X0-I4" target="_blank" class="block p-3 bg-slate-50 rounded-lg border border-slate-100 hover:border-novaNavy transition-all group">
+                            <h5 class="text-xs font-bold text-novaNavy flex justify-between group-hover:text-novaBlue transition-colors">7. Negociación de Valor <i data-lucide="video" class="w-3 h-3 text-red-500"></i></h5>
+                            <p class="text-[10px] text-gray-500 mt-1 font-normal">Defensa de precio y soporte técnico.</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: RUTAS TÉCNICAS ESPECIALIZADAS -->
+        <h3 id="rutas-tecnicas" class="text-xl font-display font-bold text-novaNavy mb-6 border-l-4 border-yellow-500 pl-3">Soporte Técnico de Fábrica (Especialización)</h3>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            
+            <!-- RUTA FLEXIM -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <div class="bg-novaNavy p-5 flex items-center justify-between">
+                    <div class="flex items-center space-x-3 text-white">
+                        <div class="bg-novaCyan p-2 rounded-lg"><i data-lucide="activity" class="w-5 h-5 text-novaNavy"></i></div>
+                        <h4 class="font-display font-bold text-white">Ruta FLEXIM (Emerson)</h4>
+                    </div>
+                    <span class="text-[10px] bg-novaCyan/20 text-novaCyan px-2 py-1 rounded-full font-bold uppercase tracking-tight">8 Módulos</span>
+                </div>
+                <div class="p-6 overflow-y-auto max-h-[500px] space-y-4">
+                    <div class="border-l-2 border-novaCyan pl-4 py-1">
+                        <h5 class="text-sm font-bold text-novaNavy mb-1">MÓDULO 0-1: Fundamentos</h5>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <a href="https://www.youtube.com/watch?v=Yn8NUyb2eZM" target="_blank" class="flex items-center text-[10px] bg-red-50 text-red-600 px-2 py-1 rounded hover:bg-red-100"><i data-lucide="play" class="w-3 h-3 mr-1"></i> Video YouTube</a>
+                            <a href="https://www.emersonautomationexperts.com/2024/espanol/episodio-52-medicion-de-caudal-no-intrusiva-conoce-flexim/" target="_blank" class="flex items-center text-[10px] bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100"><i data-lucide="mic" class="w-3 h-3 mr-1"></i> Podcast</a>
+                        </div>
+                    </div>
+                    <div class="border-l-2 border-novaCyan pl-4 py-1">
+                        <h5 class="text-sm font-bold text-novaNavy mb-1">MÓDULO 2-3: Software y Equipos</h5>
+                        <a href="https://www.youtube.com/watch?v=leCyj4uQxwU" target="_blank" class="text-[10px] text-novaBlue flex items-center underline font-bold hover:text-novaNavy transition-colors"><i data-lucide="play" class="w-3 h-3 mr-1"></i> Video Tutorial Software</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RUTA SMAR -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <div class="bg-novaBlue p-5 flex items-center justify-between">
+                    <div class="flex items-center space-x-3 text-white">
+                        <div class="bg-white p-2 rounded-lg"><i data-lucide="settings-2" class="w-5 h-5 text-novaBlue"></i></div>
+                        <h4 class="font-display font-bold text-white">Ruta SMAR (Brasil)</h4>
+                    </div>
+                    <span class="text-[10px] bg-white/20 text-white px-2 py-1 rounded-full font-bold uppercase tracking-tight">7 Módulos</span>
+                </div>
+                <div class="p-6 overflow-y-auto max-h-[500px] space-y-4">
+                    <div class="border-l-2 border-novaBlue pl-4 py-1">
+                        <h5 class="text-sm font-bold text-novaNavy mb-1">MÓDULO 0-1: General y Fundamentos</h5>
+                        <div class="flex gap-2 mt-2">
+                            <a href="https://www.youtube.com/watch?v=08tXyDTqdCI" target="_blank" class="flex items-center text-[10px] bg-red-50 text-red-600 px-2 py-1 rounded hover:bg-red-100 transition-colors"><i data-lucide="play" class="w-3 h-3 mr-1"></i> Video Corporativo</a>
+                            <a href="https://www.youtube.com/playlist?list=PLzpWGF8LbB9ES0Q5M672aO4OYIqsk0etb" target="_blank" class="flex items-center text-[10px] bg-gray-50 text-gray-600 px-2 py-1 rounded hover:bg-gray-100 transition-colors"><i data-lucide="list-video" class="w-3 h-3 mr-1"></i> Entrenamiento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 4: DOCUMENTOS E INSTITUCIONAL -->
+        <h3 class="text-xl font-display font-bold text-novaNavy border-l-4 border-novaBlue pl-3 mb-6">Documentos e Institucional</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <a href="https://novameasurementsas.sharepoint.com/:w:/s/NovaMeasurementCloud/IQAimoW3wxCASppjCUIDgEHAAf6x7ZamPXkb-ZE_3rm4bxU?e=hnA9vp" target="_blank" class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="bg-blue-50 p-3 rounded-lg mr-4 text-novaBlue"><i data-lucide="book-check" class="w-6 h-6"></i></div>
+                <div><h5 class="font-bold text-sm text-novaNavy">Reglamento Interno</h5><p class="text-[10px] text-gray-400 font-medium">Lectura obligatoria</p></div>
+            </a>
+            <a href="https://novameasurementsas.sharepoint.com/:f:/s/NovaMeasurementCloud/IgBjIs816PO6Sq15ZemaSbWVAbPEqoqc-ldmy5JvDjILmnY?e=cSeiO2" target="_blank" class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="bg-cyan-50 p-3 rounded-lg mr-4 text-novaCyan"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                <div><h5 class="font-bold text-sm text-novaNavy">Políticas y Objetivos</h5><p class="text-[10px] text-gray-400 font-medium">Marco normativo</p></div>
+            </a>
+            <a href="https://novameasurementsas.sharepoint.com/:f:/s/NovaMeasurementCloud/IgDcIz0xafMXS6QpVliyQ2n3Abh5UMRymu2x9SWvgobeOAQ?e=7u0ZZP" target="_blank" class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="bg-slate-100 p-3 rounded-lg mr-4 text-slate-600"><i data-lucide="network" class="w-6 h-6"></i></div>
+                <div><h5 class="font-bold text-sm text-novaNavy">Organigrama</h5><p class="text-[10px] text-gray-400 font-medium">Estructura organizacional</p></div>
+            </a>
+            <a href="https://novameasurementsas.sharepoint.com/:f:/s/NovaMeasurementCloud/IgCdZaB98K86S74SsZaPbYLUAbsagN2wGue9BPtwCMDuivs?e=24tnod" target="_blank" class="flex items-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div class="bg-indigo-50 p-3 rounded-lg mr-4 text-indigo-600"><i data-lucide="map" class="w-6 h-6"></i></div>
+                <div><h5 class="font-bold text-sm text-novaNavy">Mapa de Procesos</h5><p class="text-[10px] text-gray-400 font-medium">Flujo operativo</p></div>
+            </a>
+        </div>
+
+        <!-- DIRECTORIO DE CONTACTOS -->
+        <h3 class="text-xl font-display font-bold text-novaNavy mb-6 border-l-4 border-novaBlue pl-3">Directorio de Colaboradores</h3>
+        
+        <!-- Grupo Liderazgo -->
+        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Liderazgo y Administración</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            
+            <!-- Antonio Sancivier -->
+            <div class="bg-white rounded-xl shadow-sm p-4 border-t-4 border-novaNavy">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-novaNavy flex items-center justify-center text-white font-bold text-sm mr-3">AS</div>
+                    <div>
+                        <h4 class="font-bold text-xs text-novaNavy leading-tight">Antonio Sancivier</h4>
+                        <p class="text-[9px] text-novaBlue font-bold uppercase tracking-tight">Gerente General</p>
+                    </div>
+                </div>
+                <a href="mailto:asancivier@novam.com.co" class="text-[10px] text-gray-600 block hover:text-novaBlue transition-colors"><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i>asancivier@novam.com.co</a>
+            </div>
+
+            <!-- Juan M. Escandón (Ejemplo para homogeneizar) -->
+            <div class="bg-white rounded-xl shadow-sm p-4 border-t-4 border-novaBlue">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-novaBlue font-bold text-sm mr-3">JE</div>
+                    <div>
+                        <h4 class="font-bold text-xs text-novaNavy leading-tight">Juan M. Escandón</h4>
+                        <p class="text-[9px] text-novaBlue font-bold uppercase tracking-tight">Gerente Comercial</p>
+                    </div>
+                </div>
+                <a href="mailto:jescandon@novam.com.co" class="text-[10px] text-gray-600 block hover:text-novaBlue transition-colors"><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i>jescandon@novam.com.co</a>
+            </div>
+
+            <!-- Elizabeth Escandón -->
+            <div class="bg-white rounded-xl shadow-sm p-4 border-t-4 border-novaCyan">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-cyan-50 flex items-center justify-center text-novaCyan font-bold text-sm mr-3">EE</div>
+                    <div>
+                        <h4 class="font-bold text-xs text-novaNavy leading-tight">Elizabeth Escandón</h4>
+                        <p class="text-[9px] text-novaBlue font-bold uppercase tracking-tight">P. Administrativo</p>
+                    </div>
+                </div>
+                <a href="mailto:eescandon@novam.com.co" class="text-[10px] text-gray-600 block hover:text-novaBlue transition-colors"><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i>eescandon@novam.com.co</a>
+            </div>
+
+            <!-- Darling Donado -->
+            <div class="bg-white rounded-xl shadow-sm p-4 border-t-4 border-gray-400">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 font-bold text-sm mr-3">DD</div>
+                    <div>
+                        <h4 class="font-bold text-xs text-novaNavy leading-tight">Darling Donado</h4>
+                        <p class="text-[9px] text-novaBlue font-bold uppercase tracking-tight">P. Contable</p>
+                    </div>
+                </div>
+                <a href="mailto:ddonado@novam.com.co" class="text-[10px] text-gray-600 block hover:text-novaBlue transition-colors"><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i>ddonado@novam.com.co</a>
+            </div>
+        </div>
+
+        <!-- Grupo Venta Consultiva -->
+        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Equipo Venta Consultiva</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            
+            <!-- Cristian Medina -->
+            <div class="bg-white rounded-xl shadow-sm p-4 border-t-4 border-novaBlue">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-novaBlue font-bold text-sm mr-3">CM</div>
+                    <div>
+                        <h4 class="font-bold text-xs text-novaNavy leading-tight">Cristian Medina</h4>
+                        <p class="text-[9px] text-novaBlue font-bold uppercase tracking-tight">Centro - Llanos</p>
+                    </div>
+                </div>
+                <p class="text-[10px] text-slate-500 font-semibold mb-1">Profesional Venta Consultiva</p>
+                <a href="mailto:cmedina@novam.com.co" class="text-[10px] text-gray-600 block hover:text-novaBlue transition-colors"><i data-lucide="mail" class="w-3 h-3 inline mr-1 text-gray-400 group-hover:text-novaBlue"></i>cmedina@novam.com.co</a>
+            </div>
+
+            <!-- Nikol Carrillo -->
+            <div class="bg-white rounded-xl shadow-sm p-4 border-t-4 border-novaCyan">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-cyan-50 flex items-center justify-center text-novaCyan font-bold text-sm mr-3">NC</div>
+                    <div>
+                        <h4 class="font-bold text-xs text-novaNavy leading-tight">Nikol Carrillo</h4>
+                        <p class="text-[9px] text-novaCyan font-bold uppercase tracking-tight">Zona Norte</p>
+                    </div>
+                </div>
+                <p class="text-[10px] text-slate-500 font-semibold mb-1">Profesional Venta Consultiva</p>
+                <a href="mailto:ncarrillo@novam.com.co" class="text-[10px] text-gray-600 block hover:text-novaCyan transition-colors"><i data-lucide="mail" class="w-3 h-3 inline mr-1 text-gray-400 group-hover:text-novaCyan"></i>ncarrillo@novam.com.co</a>
+            </div>
+
+            <!-- Brando Delgado -->
+            <div class="bg-white rounded-xl shadow-sm p-4 border-t-4 border-slate-400">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 font-bold text-sm mr-3">BD</div>
+                    <div>
+                        <h4 class="font-bold text-xs text-novaNavy leading-tight">Brando Delgado</h4>
+                        <p class="text-[9px] text-slate-500 font-bold uppercase tracking-tight">Zona Santander</p>
+                    </div>
+                </div>
+                <p class="text-[10px] text-slate-500 font-semibold mb-1">Profesional Venta Consultiva</p>
+                <a href="mailto:bdelgado@novam.com.co" class="text-[10px] text-gray-600 block hover:text-novaBlue transition-colors"><i data-lucide="mail" class="w-3 h-3 inline mr-1 text-gray-400 group-hover:text-novaBlue"></i>bdelgado@novam.com.co</a>
+            </div>
+
+            <!-- Carolina González -->
+            <div class="bg-white rounded-xl shadow-sm p-4 border-t-4 border-novaBlue">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-novaBlue font-bold text-sm mr-3">CG</div>
+                    <div>
+                        <h4 class="font-bold text-xs text-novaNavy leading-tight">Carolina González</h4>
+                        <p class="text-[9px] text-novaBlue font-bold uppercase tracking-tight">Zona Occidente</p>
+                    </div>
+                </div>
+                <p class="text-[10px] text-slate-500 font-semibold mb-1">Profesional Venta Consultiva</p>
+                <a href="mailto:cgonzalez@novam.com.co" class="text-[10px] text-gray-600 block hover:text-novaBlue transition-colors"><i data-lucide="mail" class="w-3 h-3 inline mr-1 text-gray-400"></i>cgonzalez@novam.com.co</a>
+            </div>
+        </div>
+
+        <!-- MESA DE AYUDA -->
+        <div class="bg-novaNavy text-white rounded-2xl p-6 shadow-xl relative overflow-hidden border-b-4 border-novaCyan max-w-lg mx-auto mb-10">
+            <div class="absolute -top-4 -right-4 opacity-10 text-white"><i data-lucide="life-buoy" class="w-32 h-32 text-white"></i></div>
+            <div class="relative z-10 text-center flex flex-col items-center">
+                <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-4 border border-white/20">
+                    <i data-lucide="shield-question" class="w-8 h-8 text-novaCyan"></i>
+                </div>
+                <h4 class="font-display font-bold text-lg mb-2 text-white text-center">Soporte Técnico</h4>
+                <p class="text-[11px] text-gray-400 mb-4 text-center">Asistencia para accesos, equipo y plataformas TI.</p>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/10 w-full text-center">
+                    <p class="text-[10px] uppercase tracking-widest text-novaCyan font-bold mb-1">Correo de Soporte</p>
+                    <a href="mailto:soportetecnico@novam.com.co" class="text-sm font-medium hover:text-novaCyan transition-colors text-white">soportetecnico@novam.com.co</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-novaNavy text-center py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center">
+                <div class="flex items-center space-x-2 mb-4">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00A8E8" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    </svg>
+                    <span class="font-display font-bold text-white tracking-widest text-sm uppercase">Nova Measurement SAS</span>
+                </div>
+                <p class="text-gray-500 text-[10px] uppercase tracking-widest">Bogotá, Colombia &copy; <span id="year"></span> | Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar Iconos
+        lucide.createIcons();
+        // Año actual
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
